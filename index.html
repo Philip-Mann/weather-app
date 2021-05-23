@@ -17,24 +17,17 @@
         <div id="timestamp" style="text-align:center; height: 40px;">FRAME TIME</div>
         <div class="container-fluid">
           <ul style="text-align:center; left: 0; right: 0; height: 40px;">
-            <li><input type="radio" name="kind" checked="checked" onchange="setKind('radar')">Radar (Past + Future) <input type="radio" name="kind" onchange="setKind('satellite')">Infrared Satellite</li>
-        
+            <li><input type="radio" name="kind" checked="checked" onchange="setKind('radar')">Radar (Past + Future)</li>
             <li><input type="button" onclick="stop(); showFrame(animationPosition - 1); return;" value="&lt;" /></li>
             <li><input type="button" onclick="playStop();" value="Play / Stop" /></li>
             <li><input type="button" onclick="stop(); showFrame(animationPosition + 1); return;" value="&gt;" /></li>
-        
-            <!-- <li><select id="colors" onchange="setColors(); return;">
-                <option value="4" selected="selected">The Weather Channel</option>
-            </select></li> -->
           </ul>
         </div>
       </div>
       <div class="container-fluid radar-map" id="mapid"style=""></div>
     </main>
 
-    <script src="./location.js"></script>
     <script src="./index.js"></script>
-    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
     <script>
     document.addEventListener("DOMContentLoaded", function(event) { 
       var mapResult = mapFindMe();
@@ -51,6 +44,5 @@
       }
     }
     </script>
-    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
   </body>
 </html>
