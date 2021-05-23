@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Hello World
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Radar Page</title>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+  </head>
+  <body>
+    
+    <main>
+      <a id = "map-link" target="_blank"></a>
+      <div class="container-fluid radar-display">
+        <div id="timestamp" style="text-align:center; height: 40px;">FRAME TIME</div>
+        <div class="container-fluid">
+          <ul style="text-align:center; left: 0; right: 0; height: 40px;">
+            <li><input type="radio" name="kind" checked="checked" onchange="setKind('radar')">Radar (Past + Future) <input type="radio" name="kind" onchange="setKind('satellite')">Infrared Satellite</li>
+        
+            <li><input type="button" onclick="stop(); showFrame(animationPosition - 1); return;" value="&lt;" /></li>
+            <li><input type="button" onclick="playStop();" value="Play / Stop" /></li>
+            <li><input type="button" onclick="stop(); showFrame(animationPosition + 1); return;" value="&gt;" /></li>
+        
+            <!-- <li><select id="colors" onchange="setColors(); return;">
+                <option value="4" selected="selected">The Weather Channel</option>
+            </select></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid radar-map" id="mapid"style=""></div>
+    </main>
+
+    <script src="./location.js"></script>
+    <script src="./index.js"></script>
+    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      var mapResult = mapFindMe();
+      checkDoMap();
+    });
+    function checkDoMap() {
+      if (typeof(lat) !== "number") {
+        window.setTimeout(function() {
+        checkDoMap();
+      },1000);
+      }
+      else {
+        doMap();
+      }
+    }
+    </script>
+    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
+  </body>
 </html>

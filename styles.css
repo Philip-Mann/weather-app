@@ -1,0 +1,97 @@
+.radar-display {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .radar-map {
+    height: 700px;
+    border: 1px solid blue;
+  }
+  
+  .weather {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid crimson; */
+  }
+  
+  .w-disp {
+    /* border: 1px solid crimson; */
+    width: 540px;
+    /* max-width: 540px; */
+    max-height: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    /* text-align: center; */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* text-align: center; */
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .radar-map {
+      height: 200px;
+      margin: 18% 0;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .radar-display {
+      height: 150px;
+    }
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #news-carousel {
+    display: flex;
+    width: 80%;
+    height: fit-content;
+  
+  }
+  
+  .special-card {
+    background-color: rgba(70, 130, 180, 1);
+  }
+  
+  .special-card2 {
+    opacity: .8;
+  }
+  
+  h4 {
+    font-size: 3rem;
+  }
+  
+  h5 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.5rem;
+  }
+  
+  .btn-primary {
+    color: black;
+  }
+  
+  .carousel-inner div{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  /* @media only screen and (max-width: 767px) {
+    .carousel-item {
+        text-align: left;
+    }
+  } */
+  .card-body{
+    width: 100%;
+    text-align: left;
+  }
